@@ -32,7 +32,16 @@
   color:#CACACA
 }
 
-/* Background color*/
+/* Background*/
+
+.bg-size-fill{
+  background-size: cover;
+}
+
+.bg-size-fit-w{
+  background-size: 100%, auto;
+}
+
 .bg-black{
   background-color:#343434
 }
