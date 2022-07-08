@@ -1,3 +1,59 @@
+/* Width - Height */
+
+.w-full{
+  width: 100%;
+}
+
+.h-full{
+  position: absolute;
+  top: 0px; /* Header Height */
+  bottom: 0px; /* Footer Height */
+}
+
+/* Color Palette 1: https://colorhunt.co/palette/343434e6b31efcfaf1cacaca
+  Black, Yellow, White, Gray
+*/
+
+/* Text color */
+
+.color-black{
+  color:#343434
+}
+
+.color-yellow{
+  color:#E6B31E
+}
+
+.color-white{
+  color:#FCFAF1
+}
+
+.color-gray{
+  color:#CACACA
+}
+
+/* Background color*/
+.bg-black{
+  background-color:#343434
+}
+
+.bg-yellow{
+  background-color:#E6B31E
+}
+
+.bg-white{
+  background-color:#FCFAF1
+}
+
+.bg-gray{
+  background-color:#CACACA
+}
+
+
+
+
+/* Default */
+
 .App {
   text-align: center;
 }
