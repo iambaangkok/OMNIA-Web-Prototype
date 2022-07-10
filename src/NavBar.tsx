@@ -34,7 +34,7 @@ function NavBar(){
                     fontFamily: "'Orbitron', 'sans-serif'",
                     fontSize:"66px",
                     fontWeight: "700",
-                    
+                    userSelect: "none",
                 }}>
                     OMNIA
                 </div>

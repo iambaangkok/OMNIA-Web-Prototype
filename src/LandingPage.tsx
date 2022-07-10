@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 import NavBar from './NavBar';
+import LandingPageMainText from './LandingPageMainText';
 
 function LandingPage(){
 
@@ -32,15 +33,12 @@ function LandingPage(){
                 <div className="flex-col"
                 style={{
                     height:"50%",
-                    fontFamily: "'Orbitron', 'sans-serif'",
-                    fontSize:"60px",
-                    fontWeight: "400",
                     justifyContent:"flex-end",
                     alignItems:"flex-end",
-                    paddingRight:"5%",
+                    paddingRight:"10%",
                 }}>
-                    <div className='drop-shadow-exact'>Intergalactic</div>
-                    <div className='drop-shadow-exact'>Terran-Goods Vendor</div>
+                    <LandingPageMainText></LandingPageMainText>
+                    
                 </div>
             </div>
         </div>
