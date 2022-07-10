@@ -13,12 +13,14 @@ function NavBar(){
         style={{
             gap: "4%",
             justifyContent: "space-between",
-            height: "7%",
+            height: "12%",
             position: "relative",
             boxSizing: "border-box",
             paddingLeft:"5%",
             paddingRight:"0%",
-            marginTop:"2%",
+            paddingTop:"2%",
+            paddingBottom:"0.5%",
+            background: "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(61,61,61,1) 5%, rgba(255,255,255,0) 100%)",
             
         }}>
             <div className='flex-row'
@@ -49,6 +51,7 @@ function NavBar(){
                 <NavBarButton text={"BROWSE"} url={""}/>
                 <NavBarButton text={"SPECIALS"} url={""}/>
                 <NavBarButton text={"WHO WE ARE"} url={""}/>
+                <div></div>
             </div>
         </div>
     )

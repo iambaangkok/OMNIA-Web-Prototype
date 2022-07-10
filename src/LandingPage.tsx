@@ -12,7 +12,7 @@ function LandingPage(){
 
     const fetchItem = async () => {
         const currentTimeSeconds = Date.now()/1000
-        const resp = await axios.get(`https://picsum.photos/seed/omnia${currentTimeSeconds}/1920/1080?grayscale`, { responseType: "blob" })
+        const resp = await axios.get(`https://picsum.photos/seed/omnia${currentTimeSeconds}/1920/1080`, { responseType: "blob" })
         //console.log(resp)
         const url = URL.createObjectURL(resp.data)
 
@@ -26,10 +26,22 @@ function LandingPage(){
             <div
             className='w-full h-full color-white bg-black bg-size-fill'
             style={{
-                padding:"0%",
                 backgroundImage: `url(${itemPictureURL})`,
             }}>
                 <NavBar></NavBar>
+                <div className="flex-col"
+                style={{
+                    height:"50%",
+                    fontFamily: "'Orbitron', 'sans-serif'",
+                    fontSize:"60px",
+                    fontWeight: "400",
+                    justifyContent:"flex-end",
+                    alignItems:"flex-end",
+                    paddingRight:"5%",
+                }}>
+                    <div className='drop-shadow-exact'>Intergalactic</div>
+                    <div className='drop-shadow-exact'>Terran-Goods Vendor</div>
+                </div>
             </div>
         </div>
     )
