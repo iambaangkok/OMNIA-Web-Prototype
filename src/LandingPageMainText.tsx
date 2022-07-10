@@ -3,11 +3,16 @@ import { AiFillCaretLeft } from "react-icons/ai"
 
 function LandingPageMainText(){
 
-    const [toggleState, setToggleState] = useState<boolean>(true)
+    const [toggleState, setToggleState] = useState<boolean>(false)
 
     useEffect(() => {
-        
+        delayStart()
     }, [])
+
+    const delayStart = async () =>{
+        const promise = () => new Promise((resolve, reject) => {setTimeout(()=>{setToggleState(true) ;resolve(true)}, 1200)});
+        promise()
+    }
     
     const onClickToggle = () => {
         setToggleState(!toggleState)
