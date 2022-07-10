@@ -10,27 +10,82 @@
   bottom: 0px; /* Footer Height */
 }
 
+
+
+.drop-shadow{
+  box-shadow: 0px 0px 15px -5px rgba(0,0,0,1)
+}
+
+.drop-shadow-exact{
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7))
+}
+
+.drop-shadow-white{
+  box-shadow: 0px 0px 15px -5px rgb(255, 255, 255)
+}
+
 /* Color Palette 1: https://colorhunt.co/palette/343434e6b31efcfaf1cacaca
   Black, Yellow, White, Gray
 */
 
+
+:root {
+  --color-white:#FCFAF1;
+  --color-black:#343434;
+  --color-yellow:#E6B31E;
+  --color-gray:#CACACA;
+}
+
 /* Text color */
 
 .color-black{
-  color:#343434
+  color:var(--color-black)
 }
 
 .color-yellow{
-  color:#E6B31E
+  color:var(--color-yellow)
 }
 
 .color-white{
-  color:#FCFAF1
+  color:var(--color-white)
 }
 
 .color-gray{
-  color:#CACACA
+  color:var(--color-gray)
 }
+
+
+
+/* Flex */
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+/* .flex-justify-start{
+  justify-content: start;
+}
+
+.flex-justify-end{
+  justify-content: end;
+}
+
+.flex-align-start{
+  align-items: flex-start;
+}
+
+.flex-align-center{
+  align-items: center;
+}
+
+.flex-align-end{
+  align-items: flex-end;
+} */
 
 /* Background*/
 
@@ -43,20 +98,37 @@
 }
 
 .bg-black{
-  background-color:#343434
+  background-color:var(--color-black)
 }
 
 .bg-yellow{
-  background-color:#E6B31E
+  background-color:var(--color-yellow)
 }
 
 .bg-white{
-  background-color:#FCFAF1
+  background-color:var(--color-white)
 }
 
 .bg-gray{
-  background-color:#CACACA
+  background-color:var(--color-gray)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

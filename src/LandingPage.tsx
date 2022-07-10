@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios'
+import NavBar from './NavBar';
 
 function LandingPage(){
 
@@ -11,7 +12,7 @@ function LandingPage(){
 
     const fetchItem = async () => {
         const currentTimeSeconds = Date.now()/1000
-        const resp = await axios.get(`https://picsum.photos/seed/omnia${currentTimeSeconds}/1920/1080`, { responseType: "blob" })
+        const resp = await axios.get(`https://picsum.photos/seed/omnia${currentTimeSeconds}/1920/1080?grayscale`, { responseType: "blob" })
         //console.log(resp)
         const url = URL.createObjectURL(resp.data)
 
@@ -28,6 +29,7 @@ function LandingPage(){
                 padding:"0%",
                 backgroundImage: `url(${itemPictureURL})`,
             }}>
+                <NavBar></NavBar>
             </div>
         </div>
     )
