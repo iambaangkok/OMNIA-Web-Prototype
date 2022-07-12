@@ -1,26 +1,28 @@
 /* Width - Height */
 
-.w-full{
+.w-full {
   width: 100%;
 }
 
-.h-full{
+.h-full {
   position: absolute;
-  top: 0px; /* Header Height */
-  bottom: 0px; /* Footer Height */
+  top: 0px;
+  /* Header Height */
+  bottom: 0px;
+  /* Footer Height */
 }
 
 
 
-.drop-shadow{
-  box-shadow: 0px 0px 15px -5px rgba(0,0,0,1)
+.drop-shadow {
+  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 1)
 }
 
-.drop-shadow-exact{
-  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7))
+.drop-shadow-exact {
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7))
 }
 
-.drop-shadow-white{
+.drop-shadow-white {
   box-shadow: 0px 0px 15px -5px rgb(255, 255, 255)
 }
 
@@ -30,39 +32,39 @@
 
 
 :root {
-  --color-white:#FCFAF1;
-  --color-black:#343434;
-  --color-yellow:#E6B31E;
-  --color-gray:#CACACA;
+  --color-white: #FCFAF1;
+  --color-black: #343434;
+  --color-yellow: #E6B31E;
+  --color-gray: #CACACA;
 }
 
 /* Text color */
 
-.color-black{
-  color:var(--color-black)
+.color-black {
+  color: var(--color-black)
 }
 
-.color-yellow{
-  color:var(--color-yellow)
+.color-yellow {
+  color: var(--color-yellow)
 }
 
-.color-white{
-  color:var(--color-white)
+.color-white {
+  color: var(--color-white)
 }
 
-.color-gray{
-  color:var(--color-gray)
+.color-gray {
+  color: var(--color-gray)
 }
 
 
 
 /* Flex */
-.flex-row{
+.flex-row {
   display: flex;
   flex-direction: row;
 }
 
-.flex-col{
+.flex-col {
   display: flex;
   flex-direction: column;
 }
@@ -89,31 +91,43 @@
 
 /* Background*/
 
-.bg-size-fill{
+.bg-size-fill {
   background-size: cover;
 }
 
-.bg-size-fit-w{
+.bg-size-fit-w {
   background-size: 100%, auto;
 }
 
-.bg-black{
-  background-color:var(--color-black)
+.bg-black {
+  background-color: var(--color-black)
 }
 
-.bg-yellow{
-  background-color:var(--color-yellow)
+.bg-yellow {
+  background-color: var(--color-yellow)
 }
 
-.bg-white{
-  background-color:var(--color-white)
+.bg-white {
+  background-color: var(--color-white)
 }
 
-.bg-gray{
-  background-color:var(--color-gray)
+.bg-gray {
+  background-color: var(--color-gray)
 }
 
-
+.item-picture {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url('');
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+}
 
 
 
@@ -169,6 +183,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

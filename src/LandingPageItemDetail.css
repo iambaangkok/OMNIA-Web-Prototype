@@ -1,0 +1,29 @@
+@import "./App.css";
+
+.lpid-random-button {
+    cursor: pointer;
+    border: 0px;
+    background-color: var(--color-white);
+    box-shadow:0px 0px 0px 0px var(--color-gray) inset;
+    user-select: none;
+    transition: 0.1s;
+}
+
+.lpid-random-button:hover{
+    border: 3px;
+    cursor: pointer;
+    background-color: var(--color-white);
+    box-shadow:0px 0px 0px 3px var(--color-gray) inset;
+    user-select: none;
+    transition: 0.1s;
+}
+
+
+.lpid-random-button:active{
+    border: 3px;
+    cursor: pointer;
+    background-color: var(--color-gray);
+    box-shadow:0px 0px 0px 3px var(--color-gray) inset;
+    user-select: none;
+    transition: 0.1s;
+}

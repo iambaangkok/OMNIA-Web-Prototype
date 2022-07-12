@@ -17,7 +17,7 @@ function NavBarButton({text, url} : NavBarButtonType){
     }, [])
 
     return(
-        <div className='navbarbutton flex-col color-black drop-shadow-exact'
+        <div className='navbarbutton flex-col color-white drop-shadow-exact'
         style={{
             // gap: "4%",
             width:"30%",
