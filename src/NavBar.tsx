@@ -9,7 +9,7 @@ function NavBar(){
     }, [])
 
     return(
-        <div className='flex-row w-full color-white'
+        <div className='flex-row w-full'
         style={{
             gap: "4%",
             justifyContent: "space-between",

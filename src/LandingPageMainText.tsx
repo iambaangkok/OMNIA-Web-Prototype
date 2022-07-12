@@ -43,9 +43,7 @@ function LandingPageMainText(){
         })
     }
 
-    console.log(style)
-
-    return(
+        return(
         <div className="flex-row" onClick={onClickToggle}
         style={{
             gap:"10px",
