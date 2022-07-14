@@ -20,7 +20,7 @@ function NavBarButton({text, url} : NavBarButtonType){
         <div className='navbarbutton flex-col color-white drop-shadow-exact'
         style={{
             // gap: "4%",
-            width:"30%",
+            width:"100%",
             justifyContent: "space-between",
             position: "relative",
 
@@ -45,8 +45,8 @@ function NavBarButton({text, url} : NavBarButtonType){
                 
                 <div className='bg-white'
                 style={{
-                    height:"100%",
                     width:"2px",
+                    height:"100%",
                 }}>
                 </div>
                 

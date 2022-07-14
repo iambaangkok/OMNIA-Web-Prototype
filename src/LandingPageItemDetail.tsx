@@ -47,11 +47,7 @@ function LandingPageItemDetail({itemName, itemPrice, itemNameStyle, itemPriceSty
                 <div className='color-black'
                     style={itemNameStyle}>{itemName}</div>
                 <div className='color-black'
-                    style={{
-                        fontFamily: "'Orbitron', 'sans-serif'",
-                        fontSize: "26px",
-                        fontWeight: "600",
-                    }}>{itemPrice + " $"}</div> 
+                    style={itemPriceStyle}>{itemPrice + " $"}</div> 
             </div>
             <button className='lpid-random-button
             flex-row color-black bg-white drop-shadow-exact'

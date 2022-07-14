@@ -45,7 +45,7 @@ function LandingPageMainText(){
 
         return(
         <div className="flex-row" onClick={onClickToggle}
-        style={{
+        style={{cursor: "pointer",
             gap:"10px",
         }}>
             <div className="flex-col"

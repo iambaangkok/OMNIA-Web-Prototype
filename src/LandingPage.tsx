@@ -10,20 +10,29 @@ function LandingPage(){
     const [itemName, setItemName] = useState<string>("")
     const [itemPrice, setItemPrice] = useState<number>(0.00)
 
-    const [itemPictureStyle, setitemPictureStyle] = useState<Object>({})
-    const [itemNameStyle, setitemNameStyle] = useState<Object>({})
-    const [itemPriceStyle, setitemPriceStyle] = useState<Object>({})
+    const [itemPictureStyle, setItemPictureStyle] = useState<Object>({})
+    const [itemNameStyle, setItemNameStyle] = useState<Object>({})
+    const [itemPriceStyle, setItemPriceStyle] = useState<Object>({
+        fontFamily: "'Orbitron', 'sans-serif'",
+        fontSize: "26px",
+        fontWeight: "600",
+    })
 
     const [nextItemPictureURL, setNextItemPictureURL] = useState<string>("")
     const [nextItemName, setNextItemName] = useState<string>("")
     const [nextItemPrice, setNextItemPrice] = useState<number>(0.00)
 
-    const delay = () => new Promise((resolve, reject) => {setTimeout(()=>{resolve(true)}, 300)});
+    const delay = (timemillis:number) => new Promise((resolve, reject) => {setTimeout(()=>{resolve(true)}, timemillis)});
 
     useEffect(() => {
-        fetchNextItem();
-        nextItem();
+        firstFetch()
     }, [])
+
+    const firstFetch = async () =>{
+        await fetchNextItem();
+        await delay(1000)
+        await nextItem();
+    }
 
     const nextItem = async () => {
         var itemPictureStyle_ = {
@@ -38,22 +47,28 @@ function LandingPage(){
             fontWeight: "600",
 
             transition:"0.2s",
-            paddingRight:"100%",
-            opacity:"1",
+            opacity:"0",
         }
         var itemPriceStyle_ = {
-            a:""
+            fontFamily: "'Orbitron', 'sans-serif'",
+            fontSize: "26px",
+            fontWeight: "600",
+
+            transition:"0.2s",
+            opacity:"0",
         }
 
-        setitemPictureStyle(itemPictureStyle_)
-        setitemNameStyle(itemNameStyle_)
+        setItemPictureStyle(itemPictureStyle_)
+        setItemNameStyle(itemNameStyle_)
+        setItemPriceStyle(itemPriceStyle_)
 
         // DELAY
-        await delay()
+        await delay(300)
         // POST-DELAY
 
         setItemPictureURL(nextItemPictureURL)
         setItemName(nextItemName)
+        setItemPrice(nextItemPrice)
 
         itemPictureStyle_ = {
             backgroundImage: `url(${itemPictureURL})`,
@@ -68,11 +83,20 @@ function LandingPage(){
             fontWeight: "600",
 
             transition:"0.2s",
-            paddingRight:"0%",
             opacity:"1",
         }
-        setitemPictureStyle(itemPictureStyle_)
-        setitemNameStyle(itemNameStyle_)
+
+        itemPriceStyle_ = {
+            fontFamily: "'Orbitron', 'sans-serif'",
+            fontSize: "26px",
+            fontWeight: "600",
+
+            transition:"0.2s",
+            opacity:"1",
+        }
+        setItemPictureStyle(itemPictureStyle_)
+        setItemNameStyle(itemNameStyle_)
+        setItemPriceStyle(itemPriceStyle_)
 
     }
 
@@ -94,7 +118,7 @@ function LandingPage(){
     }
 
     const fetchItemPicture = async () => {
-        const currentTimeSeconds = Date.now()/1000
+        const currentTimeSeconds = Date.now()/1000 + Math.random()*10
         const resp = await axios.get(`https://picsum.photos/seed/omnia${currentTimeSeconds}/1920/1080`, { responseType: "blob" })
         return resp.data
     }

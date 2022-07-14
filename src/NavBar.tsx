@@ -42,10 +42,10 @@ function NavBar(){
             <div className='flex-row'
             style={{
                 gap: "0%",
-                width: "45%",
+                width: "800px",
                 justifyContent:"space-between",
                 position: "relative",
-                paddingRight: "2%"
+                paddingRight: "10%"
             }}            
             > 
                 <NavBarButton text={"BROWSE"} url={""}/>
